@@ -1,7 +1,9 @@
 library flutter_jellysidemenu;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:rebound_dart/rebound_dart.dart';
+
+part 'src/JellySideMenuSvgSpringSystemController.dart';
+part 'src/JellySideMenuSvg.dart';
+part 'src/JellySideMenu.dart';
