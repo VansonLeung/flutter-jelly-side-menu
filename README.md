@@ -1,39 +1,69 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# flutter_jellysidemenu
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A side menu that animates like a jelly!
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Demo Showcase
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
 
-## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+https://github.com/VansonLeung/flutter-jelly-side-menu/assets/1129695/9d64a878-857f-4704-854c-d27c36a52649
 
-## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+## Prerequisites
+  - dart sdk: '>=2.17.0 <4.0.0'
+  - flutter: ">=1.17.0"
+
+## Installation
+
+Add to pubspec.yaml: 
+```yaml
+flutter_jellysidemenu: ^1.0.0
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
 ```dart
-const like = 'sample';
+import JellySideMenu from 'react-native-jelly-side-menu'
+
+...
+  @override
+  Widget build(BuildContext context) {
+
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: Stack(
+        children: [
+
+          JellySideMenu(
+            controller: jellySideMenuSvgController,
+            width: width,
+            height: height,
+            child: ...   // place your own side menu widgets here
+          ),
+
+        ]
+      ),
+    );
+  }
+}
+
 ```
 
-## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+
+### Milestones
+```
+☐ Toggle via controller function support
+☐ Add Essential control parameters support (enable/disable menu, enable/disable gesture, set default state)
+☐ Add Callback support (onWillOpen(state), onDidOpen(state), onWillClose(state), onDidClose(state))
+☐ Add Menu State check function (getState() => State)
+☐ Add Fine tune control parameters support (thresholds of dragging, menu width, bounce tension & friction)
+☐ Add Side menu docking direction support (top, left, right, bottom)
+☐ Cater device orientation change
+☐ Performance improvement
