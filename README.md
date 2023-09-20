@@ -2,6 +2,10 @@
 
 A side menu that animates like a jelly!
 
+It is a Flutter equivalent of one of my React Native showcase demo `react-native-jelly-side-menu`
+- https://github.com/VansonLeung/react-native-jelly-side-menu
+
+
 ## Demo Showcase
 
 
